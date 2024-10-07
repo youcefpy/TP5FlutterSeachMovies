@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'details_movie.dart';
 // import '../details_movie.dart';
 
 class MovieSearchPage extends StatefulWidget {
@@ -13,7 +14,7 @@ class _MovieSearchPageState extends State<MovieSearchPage> {
   List movies = [];
 
   void selectDetailsPage(BuildContext ctx, movie) {
-    Navigator.of(ctx).pushNamed('/movie-details', arguments: movie);
+    Navigator.of(ctx).pushNamed(MovieDetailPage.rootName, arguments: movie);
   }
 
 // TODO: Implémentez cette méthode pour appeler l'API et récupérer les films

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import './details_movie.dart';
+import 'screens/details_movie.dart';
 import './screens/movie_serach_page.dart';
+import './screens/tab_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,9 +13,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MovieSearchPage(),
+      // home: MovieSearchPage(),
+      initialRoute: '/',
       routes: {
-        '/movie-details': (ctx) => MovieDetailPage(),
+        '/': (ctx) => TabScreen(),
+        MovieDetailPage.rootName: (ctx) => MovieDetailPage(),
       },
     );
   }

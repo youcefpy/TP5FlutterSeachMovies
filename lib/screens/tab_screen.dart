@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './favorie_screen.dart';
+import './movie_serach_page.dart';
 
 class TabScreen extends StatefulWidget {
   @override
@@ -8,6 +9,7 @@ class TabScreen extends StatefulWidget {
 
 class _TabScreenState extends State<TabScreen> {
   final List<Widget> _pages = [
+    MovieSearchPage(),
     FavoritScreen(),
   ];
   int _selectPageIndex = 0;
@@ -26,7 +28,17 @@ class _TabScreenState extends State<TabScreen> {
         backgroundColor: Colors.orange,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.star),
+            icon: Icon(
+              Icons.movie,
+              color: Colors.white,
+            ),
+            label: "Movies",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.star,
+              color: Colors.yellow,
+            ),
             label: "Favorie",
           ),
         ],

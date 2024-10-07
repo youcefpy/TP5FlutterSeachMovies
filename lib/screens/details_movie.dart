@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class MovieDetailPage extends StatelessWidget {
   // final Map movie;
   // MovieDetailPage({required this.movie});
+  static const rootName = "/movie-details";
   @override
   Widget build(BuildContext context) {
     final movie =
