@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 
 class MovieDetailPage extends StatelessWidget {
-  final Map movie;
-  MovieDetailPage({required this.movie});
+  // final Map movie;
+  // MovieDetailPage({required this.movie});
   @override
   Widget build(BuildContext context) {
+    final movie =
+        ModalRoute.of(context)?.settings.arguments as Map<String, dynamic>;
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.orange,

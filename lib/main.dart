@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import './widgets/movie_serach_page.dart';
+import './details_movie.dart';
+import 'screens/movie_serach_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,6 +13,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: MovieSearchPage(),
+      routes: {
+        '/movie-details': (ctx) => MovieDetailPage(),
+      },
     );
   }
 }

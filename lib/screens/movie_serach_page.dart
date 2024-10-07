@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-import '../details_movie.dart';
+// import '../details_movie.dart';
 
 class MovieSearchPage extends StatefulWidget {
   @override
@@ -11,6 +11,11 @@ class MovieSearchPage extends StatefulWidget {
 class _MovieSearchPageState extends State<MovieSearchPage> {
   final TextEditingController _controller = TextEditingController();
   List movies = [];
+
+  void selectDetailsPage(BuildContext ctx, movie) {
+    Navigator.of(ctx).pushNamed('/movie-details', arguments: movie);
+  }
+
 // TODO: Implémentez cette méthode pour appeler l'API et récupérer les films
   Future<void> fetchMovies(String query) async {
     final String key_api = "b444cb55";
@@ -69,21 +74,20 @@ class _MovieSearchPageState extends State<MovieSearchPage> {
 // TODO: Affichez la liste des films ou un message si aucun résultat
             Expanded(
               child: movies.isEmpty
-                  ? Center(child: Text("Aucun Film Trouvez"))
+                  ? Center(
+                      child: Text("Aucun Film Trouvez"),
+                    )
                   : ListView.builder(
                       itemCount: movies.length,
                       itemBuilder: (context, index) {
                         final movie = movies[index];
                         return ListTile(
+                          leading: CircleAvatar(
+                            child: Image.network(movie['Poster']),
+                          ),
                           title: Text(movie['Title']),
                           subtitle: Text(movie['Year']),
-                          onTap: () => Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  MovieDetailPage(movie: movie),
-                            ),
-                          ),
+                          onTap: () => selectDetailsPage(context, movie),
                         );
                       }),
             ),
