@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import './details_movie.dart';
-import 'screens/movie_serach_page.dart';
+import './screens/movie_serach_page.dart';
 
 void main() => runApp(MyApp());
 
