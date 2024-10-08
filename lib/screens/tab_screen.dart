@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './favorie_screen.dart';
 import './movie_serach_page.dart';
+// import './details_movie.dart';
 
 class TabScreen extends StatefulWidget {
   @override
@@ -26,6 +27,8 @@ class _TabScreenState extends State<TabScreen> {
       bottomNavigationBar: BottomNavigationBar(
         onTap: _selectedPage,
         backgroundColor: Colors.orange,
+        selectedItemColor: Colors.white,
+        unselectedItemColor: Colors.white,
         items: [
           BottomNavigationBarItem(
             icon: Icon(

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import '../providers/favorite_provider.dart';
 
 class MovieDetailPage extends StatelessWidget {
   // final Map movie;
@@ -8,6 +10,8 @@ class MovieDetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final movie =
         ModalRoute.of(context)?.settings.arguments as Map<String, dynamic>;
+    final favoriteMovieProvider = Provider.of<FavorieMovie>(context);
+    final isFavorite = favoriteMovieProvider.isfavorite(movie);
 
     return Scaffold(
       appBar: AppBar(
@@ -21,6 +25,19 @@ class MovieDetailPage extends StatelessWidget {
             ),
           ),
         ),
+        actions: [
+          IconButton(
+            onPressed: () {
+              if (isFavorite) {
+                favoriteMovieProvider.removeFromFavorite(movie);
+              } else {
+                favoriteMovieProvider.addFavoriteMovie(movie);
+              }
+            },
+            icon: Icon(isFavorite ? Icons.favorite : Icons.favorite_border),
+            color: Colors.white,
+          ),
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
