@@ -1,16 +1,32 @@
-# tp_ad_web
+# Flutter tutorial TP Recherche et afficher les détails d'un film 
+Une application qui permet de rechercher des films via l'API OMDB et d'afficher les détails d'un film sélectionné. Les utilisateurs peuvent également ajouter des films à leur liste de favoris
 
-A new Flutter project.
+# API OMDB
+ON utilise l'API OMDB pour récupérer les informations sur les films.
 
-## Getting Started
+# Flutter Version 
+La version utilisée pour ce TP est `Flutter 3.24.3`. 
 
-This project is a starting point for a Flutter application.
+# Bibliotheque utiliser
+`http` : pour faire des requêtes à l'API OMDB et récupérer les informations sur les films.
+`Provider`: pour gérer l'état de l'application, en particulier pour la gestion des films favoris.
 
-A few resources to get you started if this is your first Flutter project:
+# Structure du projet
+`main.dart` : Point d'entrée de l'application.
+`movie_search.dart` : Permet à l'utilisateur de rechercher des films et d'afficher les résultats.
+`details_movie.dart`:Affiche les détails du film sélectionné, avec la possibilité de l'ajouter aux favoris.
+`favorie_screen.dart`: Affiche la liste des films favoris de l'utilisateur.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+# Installation
+1. Clonez ce dépôt : `git clone https://github.com/youcefpy/TP5FlutterSeachMovies.git`
+2. Accédez au dossier du projet : `cd TP5FlutterSeachMovies`
+3. Installez les dépendances : `flutter pub get`
+4. Exécutez l'application: `flutter run`
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
+
+# Screen shots
+
+
+
