@@ -24,9 +24,11 @@ La version utilisée pour ce TP est `Flutter 3.24.3`.
 4. Exécutez l'application: `flutter run`
 
 
-
-
 # Screen shots
+<img width="374" alt="Capture d’écran 2024-10-09 001948" src="https://github.com/user-attachments/assets/9d666e29-0fe5-428e-b278-d24d38e4adca">
+<img width="373" alt="Capture d’écran 2024-10-09 002127" src="https://github.com/user-attachments/assets/7ab15372-99a8-4100-9d0b-3f695fc3c57f">
 
+<img width="377" alt="Capture d’écran 2024-10-09 002155" src="https://github.com/user-attachments/assets/22b024ab-7076-4fec-a6f2-4d02319e03f6">
 
+<img width="373" alt="Capture d’écran 2024-10-09 002230" src="https://github.com/user-attachments/assets/d38b3d3e-cd2a-4e61-a68d-e54dfc85100d">
 
