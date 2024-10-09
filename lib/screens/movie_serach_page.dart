@@ -5,6 +5,8 @@ import 'details_movie.dart';
 // import '../details_movie.dart';
 
 class MovieSearchPage extends StatefulWidget {
+  const MovieSearchPage({super.key});
+
   @override
   _MovieSearchPageState createState() => _MovieSearchPageState();
 }
@@ -19,12 +21,12 @@ class _MovieSearchPageState extends State<MovieSearchPage> {
 
 // TODO: Implémentez cette méthode pour appeler l'API et récupérer les films
   Future<void> fetchMovies(String query) async {
-    final String key_api = "b444cb55";
-    final String base_url = "https://www.omdbapi.com/";
+    const String keyApi = "b444cb55";
+    const String baseUrl = "https://www.omdbapi.com/";
 
     final String url = query.isEmpty
-        ? '$base_url?apikey=$key_api&s=movie'
-        : '$base_url?apikey=$key_api&s=$query';
+        ? '$baseUrl?apikey=$keyApi&s=movie'
+        : '$baseUrl?apikey=$keyApi&s=$query';
 
     final response = await http.get(
       Uri.parse(url),
@@ -44,9 +46,9 @@ class _MovieSearchPageState extends State<MovieSearchPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.orange,
-        title: Container(
+        title: SizedBox(
           width: double.infinity,
-          child: Text(
+          child: const Text(
             'YouMovies',
             style: TextStyle(fontSize: 30, color: Colors.white),
             textAlign: TextAlign.center,
@@ -60,22 +62,22 @@ class _MovieSearchPageState extends State<MovieSearchPage> {
 // TODO: Complétez la TextField pour saisir le titre du film
             TextField(
               controller: _controller,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: "Rechecher Votre Film",
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             ElevatedButton(
               onPressed: () => fetchMovies(_controller.text),
-              child: Text("Chercher"),
+              child: const Text("Chercher"),
             ),
 
 // TODO: Affichez la liste des films ou un message si aucun résultat
             Expanded(
               child: movies.isEmpty
-                  ? Center(
+                  ? const Center(
                       child: Text("Aucun Film Trouvez"),
                     )
                   : ListView.builder(

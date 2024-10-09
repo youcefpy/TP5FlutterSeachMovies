@@ -8,6 +8,8 @@ import './providers/favorite_provider.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   // List<MovieDetailPage> _favoriteMovies = [];
   @override
   Widget build(BuildContext context) {

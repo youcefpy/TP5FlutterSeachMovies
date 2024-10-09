@@ -6,6 +6,8 @@ class MovieDetailPage extends StatelessWidget {
   // final Map movie;
   // MovieDetailPage({required this.movie});
   static const rootName = "/movie-details";
+
+  const MovieDetailPage({super.key});
   @override
   Widget build(BuildContext context) {
     final movie =
@@ -16,11 +18,11 @@ class MovieDetailPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.orange,
-        title: Container(
+        title: SizedBox(
           width: double.infinity,
           child: Text(
             movie['Title'],
-            style: TextStyle(
+            style: const TextStyle(
               color: Colors.white,
             ),
           ),
@@ -48,7 +50,7 @@ class MovieDetailPage extends StatelessWidget {
             Card(
               child: Column(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Center(
@@ -60,7 +62,7 @@ class MovieDetailPage extends StatelessWidget {
                   ),
                   Text(
                     "Titre : ${movie['Title']}",
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 20,
                     ),
                   ),

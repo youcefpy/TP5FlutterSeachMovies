@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class FavorieMovie extends ChangeNotifier {
-  List<Map<String, dynamic>> _favoriteMovies = [];
+  final List<Map<String, dynamic>> _favoriteMovies = [];
 
   List<Map<String, dynamic>> get favoriteMovies => _favoriteMovies;
 

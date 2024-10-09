@@ -4,6 +4,8 @@ import './movie_serach_page.dart';
 // import './details_movie.dart';
 
 class TabScreen extends StatefulWidget {
+  const TabScreen({super.key});
+
   @override
   State<TabScreen> createState() => _TabScreenState();
 }
@@ -29,7 +31,7 @@ class _TabScreenState extends State<TabScreen> {
         backgroundColor: Colors.orange,
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.white,
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(
               Icons.movie,

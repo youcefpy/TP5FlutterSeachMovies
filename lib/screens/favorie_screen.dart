@@ -3,6 +3,8 @@ import 'package:provider/provider.dart';
 import '../providers/favorite_provider.dart';
 
 class FavoritScreen extends StatelessWidget {
+  const FavoritScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     final favoriteMovies = Provider.of<FavorieMovie>(context).favoriteMovies;
@@ -11,9 +13,9 @@ class FavoritScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.orange,
-        title: Container(
+        title: SizedBox(
           width: double.infinity,
-          child: Text(
+          child: const Text(
             "Favorie",
             style: TextStyle(
               color: Colors.white,
@@ -24,7 +26,7 @@ class FavoritScreen extends StatelessWidget {
         ),
       ),
       body: favoriteMovies.isEmpty
-          ? Center(
+          ? const Center(
               child: Text("Y a pas de film prefere"),
             )
           : ListView.builder(
@@ -42,7 +44,7 @@ class FavoritScreen extends StatelessWidget {
                     "Année: ${movie['Year']}",
                   ),
                   trailing: IconButton(
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.delete,
                       color: Colors.red,
                     ),
