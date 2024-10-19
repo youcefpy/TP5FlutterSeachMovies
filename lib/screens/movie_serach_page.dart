@@ -15,7 +15,7 @@ class _MovieSearchPageState extends State<MovieSearchPage> {
   final TextEditingController _controller = TextEditingController();
   List movies = [];
 
-  void selectDetailsPage(BuildContext ctx, movie) {
+  void selectDetailsPage(BuildContext ctx, Map<String, dynamic> movie) {
     Navigator.of(ctx).pushNamed(MovieDetailPage.rootName, arguments: movie);
   }
 
@@ -37,7 +37,7 @@ class _MovieSearchPageState extends State<MovieSearchPage> {
         movies = data['Search'] ?? [];
       });
     } else {
-      throw Exception("Faield to load data");
+      throw Exception("Echecde charger les donnees");
     }
   }
 
